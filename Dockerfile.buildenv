@@ -1,0 +1,16 @@
+FROM python:3.7
+
+RUN apt update -y && \
+    apt install -y pandoc && \
+    pip install twine pypandoc
+
+WORKDIR /app
+
+COPY . .
+
+RUN python setup.py install && \
+    cd test && \
+    python -m unittest script_test.py && \
+    cd ..
+
+ENTRYPOINT ["/bin/bash"]

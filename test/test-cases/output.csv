@@ -1,0 +1,2 @@
+"Run Date","Test Type","Project Name","Branch","Build Number","Build Status","Build Target","Deploy Environment","Testing Application","Test Step","Assertion","Result","Error Message"
+"2018-12-20T19:40:20+00:00","integration","my-test-project","release","1.2.3.4","pass","AnyCPU","stage","postman","up","response is ok","FAIL","expected response to have status code 200 but got 500"
